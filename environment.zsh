@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
-# Change editor to emacs
-export EDITOR=$(which nano)
-export VISUAL=$(which emacs)
+# Change editor to vim
+export EDITOR=$(which vim)
+export VISUAL=$(which vim)
 
 # Sort out history
 export HISTFILE=~/.zsh_history
