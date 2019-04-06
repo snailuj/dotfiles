@@ -1,10 +1,10 @@
 export PATH=$PATH:~/.local/bin
-
+export COLORSCHEME="dark"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-nvm use node
+#nvm use node
 
 source ~/.zplug/init.zsh
 
@@ -14,6 +14,7 @@ source ~/.zsh/environment.zsh
 
 setopt AUTO_CD
 bindkey -v
+autoload -Uz compinit && compinit -I
 
 # By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered.
 # This results in a very jarring and frustrating transition between modes. Let's reduce this delay to 0.1 seconds.
