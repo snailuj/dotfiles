@@ -1,4 +1,7 @@
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.local/bin:~/.pyenv/bin:
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 export COLORSCHEME="dark"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -22,7 +25,7 @@ autoload -Uz compinit && compinit -I
 # raising the delay.
 
 export KEYTIMEOUT=1
-
+alias 'nvim=~/.local/bin/nvim.appimage'
 alias 'gpr=git pull --rebase'
 alias 'gst=git status'
 alias 'glog=git log'
