@@ -33,6 +33,7 @@ endif
 
 " Make nice 
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
@@ -67,7 +68,7 @@ set number " Show current line number as absolute
 set relativenumber " Show other numbers relative to current
 set numberwidth=2 " Numbers are 1 char wide
 set tabstop=4 
-set linebreak
+set linebreak " Wrap only at characters that match `breakat` option
 set autoindent
 " set listchars=tab:·,extends:›,precedes:‹,nbsp:␣,trail:·
 set backspace=indent,eol,start " Allow backspacing over indentation, line breaks and insertion starts
