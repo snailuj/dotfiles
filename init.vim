@@ -54,7 +54,7 @@ colorscheme solarized
 let g:indent_guides_start_level = 2
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#33555e ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#002b36 ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#0c353f ctermbg=4
 
 " make FZF respect gitignore if `ag` is installed
