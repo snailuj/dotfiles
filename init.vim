@@ -9,6 +9,7 @@ Plug 'wincent/terminus' " Tmux nav and cursor indicator when mode changes
 Plug 'othree/yajs.vim' " JS
 Plug 'othree/html5.vim' " HTML5
 Plug 'mattn/emmet-vim' " HTML Expansions
+Plug 'alvan/vim-closetag' " Close HTML tags automatically
 Plug 'reasonml-editor/vim-reason-plus' " ReasonML
 Plug 'editorconfig/editorconfig-vim'
 
@@ -52,6 +53,18 @@ if (has("termguicolors"))
 endif
 
 colorscheme solarized
+
+" Close tags config
+let g:closetag_filenames = '*.html,*.xhtml,*.js,*.re'
+" Ignore the list of non-closing tags for the following files
+let g:closetag_filetypes = 'html,xhtml,javascript,reason'
+
+" Enable Emmet
+let g:user_emmet_settings = {
+\   'javascript': {
+\     'extends': 'jsx',
+\   }
+\}
 
 " Indent guides when expand tabs is set
 let g:indent_guides_start_level = 2
