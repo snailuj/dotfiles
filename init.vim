@@ -111,6 +111,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set smartindent
+set foldmethod=indent
 set linebreak " Wrap only at characters that match `breakat` option
 set nowrap " Because why would you?
 set textwidth=78
