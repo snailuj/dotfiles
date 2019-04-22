@@ -150,8 +150,7 @@ nnoremap <C-P> :Files<CR>
 
 " Autocomplete bindings
 nnoremap <F5> :call LanguageClient_contextMenu()<cr>
-" nnoremap <silent> <cr> :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> <C-Space> :call LanguageClient_textDocument_hover()<cr>
+nnoremap <silent> <C-?> :call LanguageClient_textDocument_hover()<cr>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<cr>
 nnoremap <silent> gf :call LanguageClient_textDocument_formatting()<cr>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<cr>
