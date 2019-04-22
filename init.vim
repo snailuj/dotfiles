@@ -18,6 +18,9 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
+" Debuggers
+Plug 'vim-vdebug/vdebug'
+
 " Autocomplete ... 
 if has('nvim')
   " ... for neovim
