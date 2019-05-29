@@ -3,6 +3,8 @@ export PATH=$PATH:~/.local/bin
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
+export ECTO_EDITOR=nvim
+
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
@@ -39,6 +41,7 @@ alias 'gcm=git commit -m'
 alias 'gcp=git cherry-pick'
 alias 'gco=git checkout'
 alias 'gp=git push'
+alias 'gre=git rebase'
 alias 'gsh=git show'
 alias 'ls=ls --color'
 alias 'whatnext=ssh -X julian@vulcan.treshna.com whatnext'
