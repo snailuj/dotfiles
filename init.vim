@@ -12,6 +12,8 @@ Plug 'mattn/emmet-vim' " HTML Expansions
 Plug 'alvan/vim-closetag' " Close HTML tags automatically
 Plug 'reasonml-editor/vim-reason-plus' " ReasonML
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-editors/vim-elixir' " Elixir
+Plug 'mhinz/vim-mix-format' " Mix formatter
 
 " Language Client 
 Plug 'autozimu/LanguageClient-neovim', {
@@ -44,6 +46,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'qpkorr/vim-bufkill' " Makes buffer kill not kill windows
 
 call plug#end()
 
@@ -119,11 +122,18 @@ set autoindent
 set cursorline
 set nolist
 set listchars=tab:>-,nbsp:␣,trail:•,extends:⟩,precedes:⟨
-:hi Whitespace ctermfg=LightGray
 set backspace=indent,eol,start " Allow backspacing over indentation, line breaks and insertion starts
+highlight Folded guibg=#0c353f
 
-set hidden
-set autoread
+set hidden 
+set autoread 
+" Improve buffer switching so pressing Tab on the
+" command line will show a menu to complete buffer and file names.
+" Can also press F10 to open the buffer menu.  
+set wildchar=<Tab> wildmenu wildmode=full
+set wildcharm=<C-Z>
+nnoremap <F10> :b <C-Z>
+
 set incsearch " Do highlight phrases while searching
 set nohlsearch " Don't continue to highlight after searching
 set ignorecase " Ignore case when searching by default
