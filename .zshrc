@@ -24,6 +24,12 @@ source ~/.zsh/environment.zsh
 setopt AUTO_CD
 bindkey -v
 autoload -Uz compinit && compinit -I
+autoload -U history-search-end
+
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
 
 # By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered.
 # This results in a very jarring and frustrating transition between modes. Let's reduce this delay to 0.1 seconds.
