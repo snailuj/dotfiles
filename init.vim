@@ -5,15 +5,18 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'wincent/terminus' " Tmux nav and cursor indicator when mode changes
 
-"" Syntax Highlighting and Formatting
+Plug 'thinca/vim-ref' " For docs
+
+" Syntax Highlight and Indentation / Snippets
+Plug 'editorconfig/editorconfig-vim' " Whitespace
 Plug 'othree/yajs.vim' " JS
 Plug 'othree/html5.vim' " HTML5
 Plug 'mattn/emmet-vim' " HTML Expansions
 Plug 'alvan/vim-closetag' " Close HTML tags automatically
 Plug 'reasonml-editor/vim-reason-plus' " ReasonML
-Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir' " Elixir
 Plug 'mhinz/vim-mix-format' " Mix formatter
+Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' } " not sure working?
 
 " Language Client 
 Plug 'autozimu/LanguageClient-neovim', {
@@ -86,6 +89,10 @@ endif
 let g:deoplete#enable_at_startup = 1
 let g:python_host_prog = expand('~/.pyenv/versions/neovim2/bin/python')
 let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
+
+" Elixir autocomplete options (doesn't use deoplete)
+" g:elixir_showerror = 1
+" g:elixir_autobuild = 1
 
 " ReasonML LSP
 let g:LanguageClient_serverCommands = {
