@@ -1,5 +1,5 @@
 export PATH=$PATH:~/.local/bin
-
+export TERM="xterm-256color"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
@@ -37,19 +37,22 @@ bindkey "^[[B" history-beginning-search-forward-end
 # raising the delay.
 
 export KEYTIMEOUT=1
-alias 'nvim=~/.local/bin/nvim.appimage'
-alias 'gpr=git pull --rebase'
-alias 'gst=git status'
-alias 'glog=git log'
-alias 'gai=git add -i 5 *'
-alias 'gc=git commit'
-alias 'gcm=git commit -m'
-alias 'gcp=git cherry-pick'
-alias 'gco=git checkout'
-alias 'gp=git push'
-alias 'gre=git rebase'
-alias 'gsh=git show'
-alias 'ls=ls --color'
-alias 'whatnext=ssh -X julian@vulcan.treshna.com whatnext'
-alias 'll=ls -la'
-alias 'la=ls -a'
+alias nvim='~/.local/bin/nvim.appimage'
+alias gpr='git pull --rebase'
+alias gst='git status'
+alias glog='git log'
+alias gai='git add -i 5 *'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gcp='git cherry-pick'
+alias gco='git checkout'
+alias gp='git push'
+alias gre='git rebase'
+alias gsh='git show'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ls='ls --color'
+alias whatnext='ssh -X julian@vulcan.treshna.com whatnext'
+alias ll='ls -la'
+alias la='ls -a'
