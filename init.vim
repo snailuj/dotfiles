@@ -167,7 +167,6 @@ nnoremap <C-P> :Files<CR>
 
 " Autocomplete bindings
 nnoremap <F5> :call LanguageClient_contextMenu()<cr>
-nnoremap <silent> <C-?> :call LanguageClient_textDocument_hover()<cr>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<cr>
 nnoremap <silent> gf :call LanguageClient_textDocument_formatting()<cr>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<cr>
@@ -202,10 +201,19 @@ nnoremap <C-y> 3<C-y>
 nmap <silent> <leader>s :set nolist!<CR>
 
 " Escape enclosing pairs with CTRL-Space
-inoremap <C-Space> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+inoremap <C-Space> <Esc>/[)}"'\]>`]<CR>:nohl<CR>a
 
 " Make CR insert a line above in normal mode
 nnoremap <silent><CR> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
+" delete window with d<C-?>
+nnoremap d<C-j> <C-w>j<C-w>c
+nnoremap d<C-k> <C-w>k<C-w>c
+nnoremap d<C-h> <C-w>h<C-w>c
+nnoremap d<C-l> <C-w>l<C-w>c
+
+" <leader>b in normal mode lists buffers and runs :buffer
+:nnoremap ,b :ls<CR>:buffer<Space>
 
 " Plugins need to be added to runtimepath before helptags can be generated.
 packloadall
