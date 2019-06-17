@@ -53,6 +53,10 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ls='ls --color'
-alias whatnext='ssh -X julian@nikita.treshna.com -p 22000 whatnext'
+if [[ $REMOTE  ]]; then
+  alias whatnext='ssh -X julian@nikita.treshna.com -p 22000 whatnext'
+else
+  alias whatnext='ssh -X julian@vulcan.treshna.com whatnext'
+fi
 alias ll='ls -la'
 alias la='ls -a'

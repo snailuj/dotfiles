@@ -1,11 +1,14 @@
 " Specify a directory for plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Styling
+" Solarized colours
 Plug 'altercation/vim-colors-solarized'
-Plug 'wincent/terminus' " Tmux nav and cursor indicator when mode changes
-
-Plug 'thinca/vim-ref' " For docs
+" Cursor indicator when mode changes
+Plug 'wincent/terminus' 
+" Indent guides
+Plug 'nathanaelkane/vim-indent-guides'
+" Docs
+Plug 'thinca/vim-ref'
 
 " Syntax Highlight and Indentation / Snippets
 Plug 'editorconfig/editorconfig-vim' " Whitespace
@@ -40,16 +43,27 @@ endif
 
 " Make nice 
 Plug 'tpope/vim-vinegar'
+" Seamless tmux pane / vim split navigation
+Plug 'christoomey/vim-tmux-navigator'
+" Easily surround blocks of text with tags / braces etc
 Plug 'tpope/vim-surround'
+
+" Save vim sessions
 Plug 'tpope/vim-obsession'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-capslock' " Disables caps lock. Use <C-G>c in Insert mode to toggle temporary software caps lock.
-Plug 'jiangmiao/auto-pairs'
+
+" Fuzzy find
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'qpkorr/vim-bufkill' " Makes buffer kill not kill windows
+
+" Enables :BD to delete a buffer without killing the window 
+Plug 'qpkorr/vim-bufkill'
+
+" BELOW ARE MORE TROUBLE THAN WORTH?
+" Automatically close pairs of brackets etc
+Plug 'jiangmiao/auto-pairs' " Can be annoying at times
+Plug 'airblade/vim-gitgutter' " I never look at it
+Plug 'tpope/vim-capslock' " not needed because remap Caps-lock to ESC
+Plug 'tpope/vim-repeat' " I just never seem to use it
 
 call plug#end()
 
