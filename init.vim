@@ -179,6 +179,11 @@ map <Space> <Leader>
 " Bind CTRL-P to fzf file search
 nnoremap <C-P> :Files<CR>
 
+" Automatically start a new edit with C-g before deleting words or rows in
+" insert mode so can undo
+inoremap <c-u> <c-g>u<c-u>
+inoremap <c-w> <c-g>u<c-w>
+
 " Autocomplete bindings
 nnoremap <F5> :call LanguageClient_contextMenu()<cr>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<cr>
