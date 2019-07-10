@@ -1,5 +1,6 @@
 export PATH=$PATH:~/.local/bin
 export TERM="xterm-256color"
+export TERM_ITALICS=true
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
@@ -41,13 +42,14 @@ alias nvim='~/.local/bin/nvim.appimage'
 alias gpr='git pull --rebase'
 alias gst='git status'
 alias glog='git log'
-alias gai='git add -i 5 *'
-alias gc='git commit'
+alias gai='git add -i'
+alias gap='git add -p' 
+alias gc='git commit -v'
 alias gcm='git commit -m'
 alias gcp='git cherry-pick'
 alias gco='git checkout'
 alias gp='git push'
-alias gre='git rebase'
+alias grb='git rebase'
 alias gsh='git show'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
