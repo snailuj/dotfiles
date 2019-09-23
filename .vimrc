@@ -5,9 +5,11 @@
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
-set backup		" keep a backup file (restore to previous version)
+" keep a backup file (restore to previous version)
+set backup		
 if has('persistent_undo')
-  set undofile	" keep an undo file (undo changes after closing)
+  " keep an undo file (undo changes after closing)
+  set undofile	
 endif
 
 " Switch on highlighting the last used search pattern.
@@ -27,9 +29,11 @@ if has("autocmd")
 
 else
 
-  set autoindent		" always set autoindenting on
+  " always set autoindenting on
+  set autoindent		
 
-endif " has("autocmd")
+" has("autocmd")
+endif 
 
 " Add optional packages.
 "
@@ -42,29 +46,46 @@ endif
 "
 " End vimrc_example.vim
 "
-set number " Show current line number as absolute
-set relativenumber " Show other numbers relative to current
-set numberwidth=2 " Numbers are 1 char wide
+
+" Show current line number as absolute
+set number
+" Show other numbers relative to current
+set relativenumber
+" Numbers are 1 char wide
+set numberwidth=2
 set tabstop=4 
 set linebreak
 set autoindent
-set backspace=indent,eol,start " Allow backspacing over indentation, line breaks and insertion starts
+" Allow backspacing over indentation, line breaks and insertion starts
+set backspace=indent,eol,start 
 
 set hidden
-set incsearch " Do highlight phrases while searching
-set nohlsearch " Don't continue to highlight after searching
-set ignorecase " Ignore case when searching by default
-set smartcase  " ... unless you type a capital
-set rtp+=/home/julian/.fzf/bin " Add the silver searcher to the runtimepath
-set autoread   " Auto read changed files from disk
-au FocusGained,BufEnter * :checktime " Also reload when switching buffers
-set history=1000 " Longer history
+" Do highlight phrases while searching
+set incsearch 
+" Don't continue to highlight after searching
+set nohlsearch
+" Ignore case when searching by default
+set ignorecase
+" ... unless you type a capital
+set smartcase 
+" Add the silver searcher to the runtimepath
+set rtp+=/home/julian/.fzf/bin
+" Auto read changed files from disk
+set autoread  
+" Also reload when switching buffers
+au FocusGained,BufEnter * :checktime
+" Longer history
+set history=1000
 
 set background=dark
-set showmode " Show mode at bottom
-set showcmd  " Show incomplete commands
-set undofile " Persist undo history between sessions
-set undodir=~/.vim/undo " But store them all in a single dir
+" Show mode at bottom
+set showmode
+" Show incomplete commands
+set showcmd 
+" Persist undo history between sessions
+set undofile
+" But store them all in a single dir
+set undodir=~/.vim/undo
 
 " Configure ALE (must be done before loading ALE)
 let g:ale_completion_enabled = 1
@@ -95,11 +116,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-sensible' " Some more sensible settings in here
-Plug 'tpope/vim-surround' " Surround with brackets, quotes etc
+" Some more sensible settings in here
+Plug 'tpope/vim-sensible'
+" Surround with brackets, quotes etc
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-obsession'
 Plug 'altercation/vim-colors-solarized'
-Plug 'wincent/terminus' " Tmux nav and cursor indicator when mode changes
+" Tmux nav and cursor indicator when mode changes
+Plug 'wincent/terminus'
 
 " For whitespace settings
 Plug 'editorconfig/editorconfig-vim'
@@ -118,8 +142,10 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ }
 
 " Do a little dance to make deoplete work (needs :UpdateRemotePlugins)
-Plug 'roxma/vim-hug-neovim-rpc' " Required for nvim-yarp. Also requires `python3 -m pip install pynvim`
-Plug 'roxma/nvim-yarp' " Required for deoplete in vim8
+" Required for nvim-yarp. Also requires `python3 -m pip install pynvim`
+Plug 'roxma/vim-hug-neovim-rpc'
+" Required for deoplete in vim8
+Plug 'roxma/nvim-yarp'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
@@ -154,8 +180,8 @@ if executable('pyls')
         \ })
 endif
 
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
+" let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+" execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
 
 " This is ugly but it works when ALE wouldn't
