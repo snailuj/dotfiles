@@ -110,6 +110,11 @@ Plug 'tpope/vim-repeat'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
+" Extra niceties for elixir in vim
+Plug 'slashmili/alchemist.vim'
+" Adds 'end' after 'def', 'do' etc
+" Plug 'tpope/vim-endwise'
+
 " How did I NOT use this for so long?
 Plug 'tpope/vim-fugitive'
 
@@ -133,6 +138,9 @@ Plug 'airblade/vim-gitgutter' " I never look at it
 Plug 'tpope/vim-capslock' " not needed because remap Caps-lock to ESC
 
 call plug#end()
+
+" Make editorconfig play nice with tpope/fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
 
 " Theme config
 if (has("termguicolors"))
@@ -184,6 +192,9 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 autocmd User CocDiagnosticChange silent call s:MaybeUpdateLightline()
+
+" Auto-equalise width of panes when window resizes
+autocmd VimResized * wincmd =
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
