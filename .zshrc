@@ -38,7 +38,10 @@ bindkey "^[[B" history-beginning-search-forward-end
 # raising the delay.
 
 export KEYTIMEOUT=1
-alias nvim='~/.local/bin/nvim.appimage'
+# setting KONSOLE_PROFILE_NAME is a hack for using tmux in Konsole with
+# terminus plugin, prevents ghost "q" character appearing randomly
+# see https://github.com/wincent/terminus/issues/32
+alias nvim='KONSOLE_PROFILE_NAME=Default ~/.local/bin/nvim.appimage'
 alias gpr='git pull --rebase'
 alias gst='git status'
 alias glog='git log'
