@@ -3,6 +3,8 @@ export TERM="xterm-256color"
 export TERM_ITALICS=true
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+# gets history in iex
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 export ECTO_EDITOR=nvim
 
@@ -65,3 +67,4 @@ else
 fi
 alias ll='ls -la'
 alias la='ls -a'
+alias iex='iex --erl "-kernel shell_history enabled"'
