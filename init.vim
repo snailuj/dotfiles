@@ -37,6 +37,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 
 " Language client
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-eslint'
 
 " Language checking for many languages
 Plug 'sheerun/vim-polyglot'
