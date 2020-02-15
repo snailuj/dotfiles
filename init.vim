@@ -8,8 +8,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Fuggedabout solarized
 " Plug 'altercation/vim-colors-solarized'
 " colorscheme solarized
-Plug 'ajmwagar/vim-deus'
-Plug 'ajmwagar/lightline-deus'
+" Plug 'ajmwagar/vim-deus'
+" Plug 'ajmwagar/lightline-deus'
+
+Plug 'ntk148v/vim-horizon'
+" lightline colorscheme
+Plug 'gruvbox-material/vim'
 
 " Statusline
 Plug 'itchyny/lightline.vim'
@@ -146,6 +150,8 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
 " Theme config
 if (has("termguicolors"))
   set t_Co=256
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
 
@@ -249,7 +255,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " use lightline-buffer in lightline
 let g:lightline = {
-      \ 'colorscheme': 'deus',
+      \ 'colorscheme': 'horizon',
       \ 'component_expand': {
       \   'linter_warnings': 'CocWarnings',
       \   'linter_errors': 'CocErrors',
@@ -347,6 +353,13 @@ function! s:MaybeUpdateLightline()
   end
 endfunction
 "       \ }
+
+" Enable true color 启用终端24位色
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 " " CoC/Lightline integration
 " function! CocCurrentFunction()
@@ -468,7 +481,7 @@ set background=dark
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let g:deus_termcolors=256
-colorscheme deus
+colorscheme horizon
 
 set showmode " Show mode at bottom
 set showcmd  " Show incomplete commands
