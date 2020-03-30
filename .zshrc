@@ -1,4 +1,4 @@
-export PATH=$PATH:~/.local/bin:~/.local/bin/flutter
+export PATH=$PATH:~/.local/bin:~/.local/bin/flutter:/opt/Postman:/snap/bin
 export TERM="xterm-256color"
 export TERM_ITALICS=true
 export PYENV_ROOT="$HOME/.pyenv"
