@@ -587,4 +587,8 @@ nnoremap d<C-l> <C-w>l<C-w>c
 packloadall
 " Load all of the helptags now, after plugins have been loaded.
 " All messages and errors will be ignored.
-silent! helptags ALL
+silent! helpags ALL
+
+set ts=4
+set shiftwidth=4
+set noexpandtab
