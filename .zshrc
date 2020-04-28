@@ -69,3 +69,6 @@ fi
 alias ll='ls -la'
 alias la='ls -a'
 alias iex='iex --erl "-kernel shell_history enabled"'
+
+# require this flag to workaround a Debian kernel problem with electron
+alias joplinapp='~/.joplin/Joplin.AppImage --no-sandbox'
