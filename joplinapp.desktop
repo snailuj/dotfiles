@@ -1,0 +1,9 @@
+# link this to ~/.config/autostart/joplinapp.desktop
+[Desktop Entry]
+Name=JoplinApp
+GenericName=Joplin desktop app
+Comment=Note taking for mobile and linux with sync
+Exec=/home/julian/.joplin/Joplin.AppImage --no-sandbox
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true
